@@ -1,0 +1,96 @@
+﻿<html>
+<head>
+    <title>Usol-V</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="BaiTapSPA.js" type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Trần Mạnh Hùng</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">500300</a></li>
+                <li><a href="#">DEV 5</a></li>
+                <li><a href="#">Usol-V</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">Chào mừng bạn đã đến với Bài tập Single Page - Trần Mạnh Hùng</h1> <br />
+        <h4>*Giới thiệu về Công ty TNHH Usol-V</h4>
+        <div class="row">
+            <div class="col-6 col-md-4">
+                <div class="jumbotron">
+                    <h2 class="text-center">Giới thiệu chung</h2>
+                    <div class="text-center">
+                        <button type="button" id="showIntroduce" class="btnShow btn btn-info " data-toggle="modal" data-target="#ShowData">Xem chi tiết</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="jumbotron">
+                    <h2 class="text-center">Địa chỉ</h2>
+                    <div class="text-center">
+                        <button type="button" id="showAddress" class=" btnShow btn btn-info " data-toggle="modal" data-target="#ShowData">Xem chi tiết</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="jumbotron">
+                    <h2 class="text-center">Liên hệ</h2>
+                    <div class="text-center">
+                        <button type="button" id="showContact" class="btnShow btn btn-info " data-toggle="modal" data-target="#ShowData">Xem chi tiết</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <br />
+                <p><b>MÔ TẢ BÀI LÀM</b></p>
+                <p><u>Ý tưởng:</u> Xây dựng một trang web giới thiệu về Công ty TNHH Usol-V</p>
+                <p><u>Phương pháp:</u></p>
+                <p>- Tạo API trên website <a href="https://mockapi.io" target="_blank">https://mockapi.io</a> để lưu thông tin dữ liệu</p>
+                <p>- Sử dụng hàm .get() của thư viên Jquery để lấy dữ liệu về tại địa chỉ: <a href="https://6037e3394e3a9b0017e927ed.mockapi.io/api/v1/usol" target="_blank">https://6037e3394e3a9b0017e927ed.mockapi.io/api/v1/usol</a></p>
+                <p>- Kiểm tra người dùng ấn vào nút "Xem chi tiết" ở phần nội dung nào từ đó hiển thị dữ liệu tương ứng ra Modal</p>
+                <p><u>Thư viên sử dụng:</u></p>
+                <p>Jquery 3.5.1: <a target="_blank" href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js</a></p>
+                <p>Bootstrap 3.4.1: <a target="_blank" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js</a></p>
+                <p>Mockapi: <a target="_blank" href="https://mockapi.io/">https://mockapi.io/</a></p>
+                <p><u>Tài liệu tham khảo:</u></p>
+                <p>Ninh Quang - Viblo: <a target="_blank" href="https://viblo.asia/p/xay-dung-mot-single-page-app-don-gian-1VgZvN42ZAw">https://viblo.asia/p/xay-dung-mot-single-page-app-don-gian-1VgZvN42ZAw</a></p>
+                <p>W3schools: <a target="_blank" href="https://www.w3schools.com/">https://www.w3schools.com/</a></p>
+                <p>Jquery: <a target="_blank" href="https://jquery.com/">https://jquery.com/</a></p> <br /> <br />
+            </div>
+        </div>
+    </div>
+    <!-- Modal hiện thông tin chi tiết -->
+    <div class="modal fade" id="ShowData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center" id="exampleModalLabel">Nội dung chi tiết</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="Introduce"></div>
+                    <div id="Address"></div>
+                    <div id="Contact"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="closeModal" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
